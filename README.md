@@ -21,9 +21,10 @@
     -  npm start
    
    -  Alternatively, to run the frontend in build mode, execute the following:
-            - npm run build
-            - serve -S build
-            - (In order to run in build mode, modify the API_BASE_URL constant in lonca/dashboard/src/config.js to match the public IP of your backend environment)
+     -  npm run build
+     - serve -S build
+      
+  (In order to for the app to run in build mode successfully, modify the API_BASE_URL constant in lonca/dashboard/src/config.js to match the public IP of your backend environment)
  
 ## General
 - The backend server by default uses port 5000. Ensure that this port is available or modify the code to specify an alternative port if needed.
