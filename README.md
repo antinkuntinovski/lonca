@@ -2,17 +2,17 @@
  Vendor Dashboard Case Study for lonca.co
 
 ## Getting Started:
-    ### Clone the Repository:
+   ### Clone the Repository:
         - "git clone https://github.com/antinkuntinovski/lonca.git"
   
-    ### Start the Backend
+   ### Start the Backend
         - Navigate to the lonca/backend directory.
         - Install the required dependencies by running:
             npm install
         - Launch the backend server by running:
             - npm run serve
 
-    ### Start the Frontend
+   ### Start the Frontend
         - Navigate to the lonca/dashboard directory.
         - Install the necessary frontend dependencies with:
             - npm install
