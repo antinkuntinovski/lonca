@@ -18,11 +18,11 @@
     -  npm install
         
    - To run the frontend in development mode, execute:
-    -  npm start
+    - npm start
    
    -  Alternatively, to run the frontend in build mode, execute the following:
-     -  npm run build
-     - serve -S build
+    -  npm run build
+    -  serve -S build
       
   (In order to for the app to run in build mode successfully, modify the API_BASE_URL constant in lonca/dashboard/src/config.js to match the public IP of your backend environment)
  
