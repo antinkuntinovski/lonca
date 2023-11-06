@@ -223,7 +223,6 @@ const SalesContent = ({ vendorId }) => {
     const [itemCountsData, setItemCountsData] = useState({});
     const [quantityData, setQuantityData] = useState({});
 
-
     useEffect(() => {
         async function fetchData() {
             try {
