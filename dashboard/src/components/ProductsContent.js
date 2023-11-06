@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-
+import API_BASE_URL from '../config';
 const ProductsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -148,7 +148,7 @@ const ProductsContent = ({ vendorId }) => {
     useEffect(() => {
         async function fetchOrders() {
             try {
-                const response = await fetch(`http://localhost:5000/dashboard/orders/vendor/${vendorId}`);
+                const response = await fetch(`${API_BASE_URL}/dashboard/orders/vendor/${vendorId}`);
                 const ordersData = await response.json();
 
                 // Process orders to count instances and sum quantities, item_count, and cogs
@@ -179,7 +179,7 @@ const ProductsContent = ({ vendorId }) => {
 
         async function fetchProductNames() {
             try {
-                const response = await fetch(`http://localhost:5000/dashboard/parents/${vendorId}`);
+                const response = await fetch(`${API_BASE_URL}/dashboard/parents/${vendorId}`);
                 const data = await response.json();
                 const productNameMapping = {};
 

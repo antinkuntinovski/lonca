@@ -9,6 +9,7 @@ import ScrollToTopButton from '../utils/ScrollToTopButton';
 import OrdersContent from '../components/OrdersContent';
 import ProductsContent from '../components/ProductsContent';
 import SalesContent from '../components/SalesContent';
+import API_BASE_URL from '../config';
 
 const DashboardContainer = styled.div`
   display: flex;
@@ -161,7 +162,7 @@ function Dashboard() {
     useEffect(() => {
         async function fetchVendorInfo() {
             try {
-                const response = await axios.get(`http://localhost:5000/dashboard/vendors/${vendorId}`);
+                const response = await axios.get(`${API_BASE_URL}/dashboard/vendors/${vendorId}`);
                 setVendorInfo(response.data[0]);
             } catch (error) {
                 console.error('Error fetching vendor info:', error);

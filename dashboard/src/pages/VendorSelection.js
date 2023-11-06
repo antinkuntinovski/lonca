@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import logo from '../assets/lonca.png';
+import API_BASE_URL from '../config';
 //import backgroundGIF from '../assets/background.gif';
 
 const blinkTextCursor = keyframes`
@@ -87,18 +88,18 @@ const GoToDashboardButton = styled.button`
 function TypeWriter({ value }) {
   const [text, setText] = useState('');
 
-  const typeWriter = (text, i = 0) => {
+  const typeWriter = useCallback((text, i = 0) => {
     if (i < value.length) {
       setText(text.slice(0, i + 1));
       setTimeout(() => {
         typeWriter(text, i + 1);
       }, 100);
     }
-  };
+  }, [value]);
 
   useEffect(() => {
     typeWriter(value);
-  }, []);
+  }, [typeWriter, value]);
 
   return (
     <Heading>
@@ -116,7 +117,7 @@ function VendorSelection() {
   useEffect(() => {
     async function fetchVendors() {
       try {
-        const response = await axios.get('http://localhost:5000/dashboard/vendors');
+        const response = await axios.get(`${API_BASE_URL}/dashboard/vendors`);
         setVendors(response.data);
       } catch (error) {
         console.error('Error fetching vendors:', error);

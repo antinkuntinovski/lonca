@@ -4,6 +4,7 @@ import { Bar } from 'react-chartjs-2';
 import 'chart.js/auto';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import API_BASE_URL from '../config';
 
 const Layout = styled.div`
   display: flex;
@@ -120,7 +121,7 @@ const Graph = ({ vendorId, selectedYear }) => {
     useEffect(() => {
         async function fetchData() {
             try {
-                const ordersResponse = await fetch(`http://localhost:5000/dashboard/orders/${vendorId}/${selectedYear}`);
+                const ordersResponse = await fetch(`${API_BASE_URL}/dashboard/orders/${vendorId}/${selectedYear}`);
                 const ordersData = await ordersResponse.json();
 
                 const monthlyCOGS = Array(12).fill(0);
@@ -226,7 +227,7 @@ const SalesContent = ({ vendorId }) => {
     useEffect(() => {
         async function fetchData() {
             try {
-                const ordersResponse1 = await fetch(`http://localhost:5000/dashboard/orders/${vendorId}/2021`);
+                const ordersResponse1 = await fetch(`${API_BASE_URL}/dashboard/orders/${vendorId}/2021`);
                 const ordersData1 = await ordersResponse1.json();
 
                 const yearlyCOGS = Array(4).fill(0);
@@ -246,7 +247,7 @@ const SalesContent = ({ vendorId }) => {
                     const quantity = order.cart_item.quantity;
                     yearlyQuantities[0] += quantity;
                 });
-                const ordersResponse2 = await fetch(`http://localhost:5000/dashboard/orders/${vendorId}/2022`);
+                const ordersResponse2 = await fetch(`${API_BASE_URL}/dashboard/orders/${vendorId}/2022`);
                 const ordersData2 = await ordersResponse2.json();
 
                 ordersData2.forEach((order) => {
@@ -263,7 +264,7 @@ const SalesContent = ({ vendorId }) => {
                     const quantity = order.cart_item.quantity;
                     yearlyQuantities[1] += quantity;
                 });
-                const ordersResponse3 = await fetch(`http://localhost:5000/dashboard/orders/${vendorId}/2023`);
+                const ordersResponse3 = await fetch(`${API_BASE_URL}/dashboard/orders/${vendorId}/2023`);
                 const ordersData3 = await ordersResponse3.json();
 
                 ordersData3.forEach((order) => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-
+import API_BASE_URL from '../config';
 const OrdersGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -100,7 +100,7 @@ const OrdersContent = ({ vendorId }) => {
     useEffect(() => {
         async function fetchOrders() {
             try {
-                const response = await fetch(`http://localhost:5000/dashboard/orders/vendor/${vendorId}`);
+                const response = await fetch(`${API_BASE_URL}/dashboard/orders/vendor/${vendorId}`);
                 const data = await response.json();
 
                 // Sort the orders based on the selected sorting method
@@ -122,7 +122,7 @@ const OrdersContent = ({ vendorId }) => {
 
         async function fetchParentProducts() {
             try {
-                const response = await fetch(`http://localhost:5000/dashboard/parents/${vendorId}`);
+                const response = await fetch(`${API_BASE_URL}/dashboard/parents/${vendorId}`);
                 const data = await response.json();
                 const productNameMapping = {};
                 data.forEach((product) => {
