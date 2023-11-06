@@ -3,7 +3,7 @@
 
 ## Getting Started:
    ### Clone the Repository:
-        - "git clone https://github.com/antinkuntinovski/lonca.git"
+   git clone https://github.com/antinkuntinovski/lonca.git
   
    ### Start the Backend
    - Navigate to the lonca/backend directory.
