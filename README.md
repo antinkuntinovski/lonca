@@ -6,20 +6,21 @@
         - "git clone https://github.com/antinkuntinovski/lonca.git"
   
    ### Start the Backend
-        - Navigate to the lonca/backend directory.
-        - Install the required dependencies by running:
-            npm install
-        - Launch the backend server by running:
-            - npm run serve
+   - Navigate to the lonca/backend directory.
+   - Install the required dependencies by running:
+     - npm install
+   - Launch the backend server by running:
+     - npm run serve
 
    ### Start the Frontend
-        - Navigate to the lonca/dashboard directory.
-        - Install the necessary frontend dependencies with:
-            - npm install
+   - Navigate to the lonca/dashboard directory.
+   - Install the necessary frontend dependencies with:
+   -  npm install
         
-        - To run the frontend in development mode, execute:
-            - npm start
-        Alternatively, to run the frontend in build mode, execute the following:
+   - To run the frontend in development mode, execute:
+   -  npm start
+   
+   -  Alternatively, to run the frontend in build mode, execute the following:
             - npm run build
             - serve -S build
             - (In order to run in build mode, modify the API_BASE_URL constant in lonca/dashboard/src/config.js to match the public IP of your backend environment)
