@@ -1,32 +1,68 @@
-# Lonca
- Vendor Dashboard Case Study for lonca.co
+# Lonca Vendor Dashboard
 
-## Getting Started:
-   ### Clone the Repository:
-   git clone https://github.com/antinkuntinovski/lonca.git
-  
-   ### Start the Backend
-   - Navigate to the lonca/backend directory.
-   - Install the required dependencies by running:
-      - npm install
-   - Launch the backend server by running:
-      - npm run serve
+Welcome to the Lonca Vendor Dashboard repository! This document will guide you through the steps to set up and run the Lonca Vendor Dashboard on your local environment. Whether you are a developer or vendor, this dashboard provides an intuitive interface to manage your business activities seamlessly.
 
-   ### Start the Frontend
-   - Navigate to the lonca/dashboard directory.
-   - Install the necessary frontend dependencies with:
-      -  npm install
-        
-   - To run the frontend in development mode, execute:
-      - npm start
-   
-   -  Alternatively, to run the frontend in build mode, execute the following:
-      -  npm run build
-      -  serve -S build
-      
-  (In order to for the app to run in build mode successfully, modify the API_BASE_URL constant in lonca/dashboard/src/config.js to match the public IP of your backend environment)
- 
+## Getting Started
+
+### Clone the Repository
+
+To get started, clone the Lonca Vendor Dashboard repository by running the following command:
+
+```bash
+git clone https://github.com/antinkuntinovski/lonca.git
+```
+
+### Start the Backend
+
+1. Navigate to the backend directory:
+   ```bash
+   cd lonca/backend
+   ```
+
+2. Install the required backend dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Launch the backend server:
+   ```bash
+   npm run serve
+   ```
+
+### Start the Frontend
+
+1. Navigate to the dashboard directory:
+   ```bash
+   cd lonca/dashboard
+   ```
+
+2. Install the necessary frontend dependencies:
+   ```bash
+   npm install
+   ```
+
+3. To run the frontend in development mode, execute:
+   ```bash
+   npm start
+   ```
+
+Alternatively, to run the frontend in build mode, follow these steps:
+
+   - Build the frontend:
+     ```bash
+     npm run build
+     ```
+
+   - Serve the built files:
+     ```bash
+     serve -S build
+     ```
+
+   To run the app successfully in build mode, you need to modify the `API_BASE_URL` constant in `lonca/dashboard/src/config.js` to match the public IP of your backend environment.
+
 ## General
-- The backend server by default uses port 5000. Ensure that this port is available or modify the code to specify an alternative port if needed.
-- The web application is designed to run on localhost port 3000. If port 3000 is not available, React will automatically select the next available port. Simply navigate to the designated port in your web browser, and the Lonca Vendor Dashboard will be accessible.
 
+- The backend server, by default, uses port 5000. If this port is not available, you can modify the code to specify an alternative port.
+- The web application is designed to run on localhost port 3000. If port 3000 is not available, React will automatically select the next available port. You can access the Lonca Vendor Dashboard by navigating to the designated port in your web browser.
+
+Thank you for choosing Lonca Vendor Dashboard. We hope this tool enhances your business operations. If you have any questions or need assistance, please feel free to reach out. Happy managing!
