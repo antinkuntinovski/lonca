@@ -95,7 +95,7 @@ const OrdersContent = ({ vendorId }) => {
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
     const [productNames, setProductNames] = useState({});
-    const [sortBy, setSortBy] = useState('newest'); // State to track sorting
+    const [sortBy, setSortBy] = useState('newest');
 
     useEffect(() => {
         async function fetchOrders() {
@@ -103,7 +103,6 @@ const OrdersContent = ({ vendorId }) => {
                 const response = await fetch(`${API_BASE_URL}/dashboard/orders/vendor/${vendorId}`);
                 const data = await response.json();
 
-                // Sort the orders based on the selected sorting method
                 data.sort((a, b) => {
                     if (sortBy === 'newest') {
                         return new Date(b.payment_at) - new Date(a.payment_at);

@@ -152,7 +152,6 @@ const ProductsContent = ({ vendorId }) => {
                 const response = await fetch(`${API_BASE_URL}/dashboard/orders/vendor/${vendorId}`);
                 const ordersData = await response.json();
 
-                // Process orders to count instances and sum quantities, item_count, and cogs
                 const productInfoMap = {};
 
                 ordersData.forEach((order) => {
@@ -219,7 +218,6 @@ const ProductsContent = ({ vendorId }) => {
         }))
         .sort(sortProducts);
 
-    // Create separate arrays for each sorting criteria
     const sortByQuantity = [...sortedProductInfo].sort((a, b) => b.quantity - a.quantity);
     const sortByItemCount = [...sortedProductInfo].sort((a, b) => b.item_count - a.item_count);
     const sortByCOGS = [...sortedProductInfo].sort((a, b) => b.cogs - a.cogs);
