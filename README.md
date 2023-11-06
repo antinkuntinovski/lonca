@@ -2,17 +2,17 @@
  Vendor Dashboard Case Study for lonca.co
 
 # Start
-- git clone https://github.com/antinkuntinovski/lonca.git
+- "git clone https://github.com/antinkuntinovski/lonca.git"
   
  ## Start Backend
 - Navigate to lonca/backend and run the commands below in the terminal
-- npm install
-- npm run serve
+- "npm install"
+- "npm run serve"
 
  ## Start Frontend
 - Navigate to lonca/dashboard and run the commands below in the terminal
-- npm install
-- npm start (for dev mode) or npm run build | serve -S build (build mode) 
+- "npm install"
+- "npm start" (for dev mode) or "npm run build" then "serve -S build" (build mode) 
 
  ## General
 - The backend uses localhost port 5000. So, make sure the port is free or modify the code for the alternative port to be used.
