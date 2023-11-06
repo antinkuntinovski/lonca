@@ -62,6 +62,6 @@ Alternatively, to run the frontend in build mode, follow these steps:
 
 ## General
 
-- The backend server, by default, uses port 5000. If this port is not available, you can modify the code to specify an alternative port.
+- The backend server, by default, uses port 5000. If this port is not available, you can modify the .env file in the backend directory to specify an alternative port.
 - The web application is designed to run on localhost port 3000. If port 3000 is not available, React will automatically select the next available port. You can access the Lonca Vendor Dashboard by navigating to the designated port in your web browser.
 
