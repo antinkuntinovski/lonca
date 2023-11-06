@@ -8,17 +8,17 @@
    ### Start the Backend
    - Navigate to the lonca/backend directory.
    - Install the required dependencies by running:
-     - npm install
+      - npm install
    - Launch the backend server by running:
-     - npm run serve
+      - npm run serve
 
    ### Start the Frontend
    - Navigate to the lonca/dashboard directory.
    - Install the necessary frontend dependencies with:
-   -  npm install
+    -  npm install
         
    - To run the frontend in development mode, execute:
-   -  npm start
+    -  npm start
    
    -  Alternatively, to run the frontend in build mode, execute the following:
             - npm run build
