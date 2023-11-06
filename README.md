@@ -12,7 +12,7 @@
  ## Start Frontend
 - Navigate to lonca/dashboard and run the commands below in the terminal
 - npm install
-- npm start
+- npm start (for dev mode) or npm run build | serve -S build (build mode) 
 
  ## General
 - The backend uses localhost port 5000. So, make sure the port is free or modify the code for the alternative port to be used.
