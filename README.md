@@ -2,7 +2,7 @@
  Vendor Dashboard Case Study for lonca.co
 
 # Start
-- git clone (github url here)
+- git clone https://github.com/antinkuntinovski/lonca.git
   
 - ## Start Backend
 - Navigate to lonca/backend and run the commands below in the terminal
