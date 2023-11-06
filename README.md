@@ -1,6 +1,6 @@
 # Lonca Vendor Dashboard
 
-Welcome to the Lonca Vendor Dashboard repository! This document will guide you through the steps to set up and run the Lonca Vendor Dashboard on your local environment. Whether you are a developer or vendor, this dashboard provides an intuitive interface to manage your business activities seamlessly.
+This document will guide you through the steps to set up and run the Lonca Vendor Dashboard on your local environment.
 
 ## Getting Started
 
@@ -65,4 +65,3 @@ Alternatively, to run the frontend in build mode, follow these steps:
 - The backend server, by default, uses port 5000. If this port is not available, you can modify the code to specify an alternative port.
 - The web application is designed to run on localhost port 3000. If port 3000 is not available, React will automatically select the next available port. You can access the Lonca Vendor Dashboard by navigating to the designated port in your web browser.
 
-Thank you for choosing Lonca Vendor Dashboard. We hope this tool enhances your business operations. If you have any questions or need assistance, please feel free to reach out. Happy managing!
